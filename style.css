@@ -229,13 +229,12 @@ Animations
   .nav{
     width: 110%;
     height:100%; 
-    text-align:center;
-    justify-content: center;
     z-index: 4;
   }
   .nav-wrapper {
  	margin-top: 40%;
 	  text-align: center;
+	  margin-right: 5%;
   }
 	
   .parent {
