@@ -5,6 +5,7 @@
     <title>  benjamin code challenge  </title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Tenor+Sans&display=swap"
@@ -26,9 +27,7 @@
 
 <label for="toggle" class="hamburger"> 
   <div class="top-bun"></div>
-  <div class="meat"></div>
   <div class="bottom-bun"></div>
-
 </label>
 
 <div class="nav">
@@ -48,7 +47,10 @@
 
 <div class="text">
             30 feelings
-        </div>
+</div>
+<div class="sortby_mobile">
+  <a href="#">Sort by</a>
+</div>
 
 </div>
 <div class="div3"> </div>
@@ -68,12 +70,22 @@
  </div>
 <div class="div5"> </div>
 <div class="div6">
-        <ul>
+        <ul class="more900">
             <li>Instagram</li>
             <li>Facebook</li>
             <li>YouTube</li>
             <li>Pinterest</li>
         </ul>
+        <ul class="less900">
+          <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fab fa-pinterest" aria-hidden="true"> </i></a></li>
+         
+      </ul>
+
+
+
  </div>
 <div class="div7">
         <div class="merdoum"></div>
@@ -82,9 +94,5 @@
 
 </body>
 </html>
-<script type="text/javascript">
-     const enable = (e) => {
-            document.getElementById('burger').classList.toggle("open");
-            document.getElementById("nav").classList.toggle("nav-open");
-        };
-</script>
+
+<script src="https://kit.fontawesome.com/beb98df05a.js" crossorigin="anonymous"></script>
