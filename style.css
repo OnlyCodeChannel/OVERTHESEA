@@ -164,7 +164,7 @@ Nav Styles
   position: fixed;
   width: 30%;
   height: 50%;
-  background-color: #dedee0af;
+  background-color: #ffffffcb;
   top: -100%;  right: -50px; bottom: 0;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -232,8 +232,11 @@ Animations
     text-align:center;
     justify-content: center;
     z-index: 4;
-
   }
+  .nav-wrapper {
+ 	margin-top: 40%;
+  }
+	
   .parent {
     display: flex;
    flex-direction: column;
