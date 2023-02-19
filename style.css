@@ -183,12 +183,12 @@ display: flex;
           clip-path: polygon(0 0, 0 100%, 100% 50%);
                    
         }
-/******************************************************************************************/
+/*right photo*/
 .right_photo { grid-area: 3 / 8 / 6 / 13; 
 border-bottom: 2px solid black;
 border-left: 2px solid black;
 border-top: 2px solid black;
-background-image: url(photos/ben.jpg);
+background-image: url(photos/phright.jpg);
 background-size: cover;
 background-position: 0% 10% ;
 height: 130%;
