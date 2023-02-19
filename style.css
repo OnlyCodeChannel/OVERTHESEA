@@ -1,3 +1,5 @@
+/* REALISED BY AMINE SARADOUNI   INSTAGRAM,TIKTOK,YOUTUBE @ONLYCODECHANNEL*/
+
 body{
   height:100vh;
   margin: 0;
@@ -12,22 +14,112 @@ grid-column-gap: 0px;
 grid-row-gap: 0px;
 }
 
-.div1 { grid-area: 1 / 1 / 2 / 13; 
-border-bottom: 2px solid black;
 
-align-items: center;
+/*********************************************************** header**********************************************************/
+.header{ grid-area: 1 / 1 / 2 / 13; 
+  border-bottom: 2px solid black;
+  align-items: center;
   justify-content: center;
   display: flex;
   position: relative;
 }
-.div2 { grid-area: 2 / 1 / 10 / 3;
-border-bottom: 2px solid black;
-border-right: 2px solid black;
-display: flex;
-justify-content: center;
- writing-mode: vertical-rl;
- flex-direction: column;
- align-items: center;
+
+.logo {
+  font-family: 'Mattone';
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+/********************************************************navigation menu********************************************************/
+#toggle {
+  display: none;
+}
+/**
+  Hamburger
+**/
+.hamburger {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.hamburger div {
+  position: relative;
+  width: 3em;
+  height: 0.4em;
+  border-radius: 3px;
+  background-color: #000000;
+  margin-top: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/** Nav Styles **/
+.nav {
+  position: fixed;
+  width: 30%;
+  height: 50%;
+  background-color: #ffffffcb;
+  top: -100%;  right: -50px; bottom: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+  text-align: start;
+  padding-left: 1em;
+}
+.nav-wrapper {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+  margin-top: 3em;
+
+}
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #000000;
+  font-size: 5vh;
+  display: inline-block;
+  margin-top: 1em;
+  transition: color 0.2s ease-in-out;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/**Animations**/
+#toggle:checked + .hamburger .top-bun {
+  transform: rotate(-45deg);
+  margin-top: 25px;
+}
+
+#toggle:checked + .hamburger .bottom-bun {
+  transform: rotate(45deg);
+  margin-top: -7px;
+}
+
+#toggle:checked + .hamburger + .nav {
+  top: 0;
+  transform: scale(1);
+}
+
+/********************************************************************************************************************************/
+
+
+
+/**************************************************************aside************************************************************/
+.aside { grid-area: 2 / 1 / 10 / 3;
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      display: flex;
+      justify-content: center;
+      writing-mode: vertical-rl;
+      flex-direction: column;
+      align-items: center;
  }
 
 .text {
@@ -35,16 +127,19 @@ justify-content: center;
     font-size: 16vh;
     transform: rotate(180deg);
   }
-
-.div3 { grid-area: 2 / 3 / 10 / 9; 
+/******************************************************************************************************************************/
+/**************************************************************main***************************************************************/
+.main { grid-area: 2 / 3 / 10 / 9; 
 border-bottom: 2px solid black;
 border-right: 2px solid black;
-background-image: url(photos/benjamincode.jpg);
+background-image: url(photos/olala.jpeg);
 background-size: cover;
 background-position: center top;
-
 }
-.div4 { grid-area: 2 / 9 / 10 / 13; 
+
+/***************************************right side**************************************************/
+
+.right { grid-area: 2 / 9 / 10 / 13; 
 border-bottom: 2px solid black;
 display: flex;
     flex-direction: column;
@@ -86,23 +181,10 @@ display: flex;
           height: 10px;
           background-color: black;
           clip-path: polygon(0 0, 0 100%, 100% 50%);
-          
-         
-         
+                   
         }
-
-
-    
-
-
-
-
-
-
-
-
-.div5 { grid-area: 3 / 8 / 6 / 13; 
-background-color: red;
+/******************************************************************************************/
+.right_photo { grid-area: 3 / 8 / 6 / 13; 
 border-bottom: 2px solid black;
 border-left: 2px solid black;
 border-top: 2px solid black;
@@ -111,18 +193,17 @@ background-size: cover;
 background-position: 0% 10% ;
 height: 130%;
 margin-top: -5%;
-
-
-
 }
-.div6 { grid-area: 10 / 1 / 11 / 9;
+
+/*****************************************************footer**************************************************************/
+
+.footer_left { grid-area: 10 / 1 / 11 / 9;
 border-right: 2px solid black;
 display: flex;
 align-items: center;
 justify-content: center;
 
  }
-
 ul{
 
     font-family: 'Poppins', sans-serif;
@@ -131,8 +212,8 @@ ul{
     gap: 2em;
     
 }
-
-.div7 { grid-area: 10 / 9 / 11 / 13;
+/***************************************************************************************************/
+.footer_right{ grid-area: 10 / 9 / 11 / 13;
 
 font-family: 'Poppins', sans-serif;
 
@@ -142,116 +223,23 @@ font-family: 'Poppins', sans-serif;
   gap: 20px;
 
  }
-  .merdoum {
+  .point_noir {
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background: black;
-
   }
-
-
-.logo {
-    font-family: 'Mattone';
-    letter-spacing: 2px;
-    font-size: 20px;
-  }
-
-
-
-#toggle {
-  display: none;
-}
-
-/**
-  Hamburger
-**/
-.hamburger {
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  transform: translateY(-50%);
-  z-index: 5;
-}
-
-.hamburger div {
-  position: relative;
-  width: 3em;
-  height: 0.4em;
-  border-radius: 3px;
-  background-color: #000000;
-  margin-top: 2px;
-  transition: all 0.3s ease-in-out;
-}
-
-/**
-Nav Styles
-**/
-.nav {
-  position: fixed;
-  width: 30%;
-  height: 50%;
-  background-color: #ffffffcb;
-  top: -100%;  right: -50px; bottom: 0;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  transform: scale(0);
-  text-align: start;
-  padding-left: 1em;
-}
-.nav-wrapper {
-  position: relative;
-  overflow: hidden;
-  overflow-y: auto;
-  height: 100%;
-  margin-top: 3em;
-
-}
-nav a {
-  position: relative;
-  text-decoration: none;
-  color: #000000;
-  font-size: 5vh;
-  display: inline-block;
-  margin-top: 1em;
-  transition: color 0.2s ease-in-out;
-  letter-spacing: 1px;
-}
-
-nav a:hover {
-  color: white;
-}
-
-
-/**
-Animations
-**/
-#toggle:checked + .hamburger .top-bun {
-  transform: rotate(-45deg);
-  margin-top: 25px;
-}
-
-#toggle:checked + .hamburger .bottom-bun {
-  transform: rotate(45deg);
-  margin-top: -7px;
-}
-
-#toggle:checked + .hamburger + .nav {
-  top: 0;
-  transform: scale(1);
-}
-
-
-
-
 .less900{
   display: none;
 }
 .sortby_mobile{
   display: none;
 }
+/**********************************************************************************************************************************************/
 
-@media screen and (max-width: 800px) {
+
+/*BREAK POINT FOR DEVIVES LESS THEN 800PX*/
+@media (max-width: 800px) {
 
   body{
     height: 100%;
@@ -273,11 +261,11 @@ margin-right: 5%;
    flex-direction: column;
     height: 100%;
   }
-  .div1{
+  .header{
     height: 10vh;
    border: 0;
   }
-  .div2{
+  .aside{
    writing-mode:horizontal-tb;
    border-style: solid;
    border-width: 2px 0px 2px 0px;
@@ -301,25 +289,25 @@ color: #000000;
     transform: rotate(0deg);
     font-size: 5vh;
   }
-  .div3{
+  .main{
     height: 100vh;
     margin: 5px ;
     border: 0;
   }
-  .div4{
+  .right{
     height: 30vh;
     align-items: center;
     justify-content: center;
     border-style: solid;
     border-width: 2px 0px 2px 0px;
   }
-  .div5{
+  .right_photo{
     height: 100vh;
     background-position:center ;  
     margin: 5px 8px 5px 5px; 
     border-left: 0;
   }
-  .div6{
+  .footer_left{
     border: 0;
   }
   .more900{
@@ -334,3 +322,5 @@ color: #000000;
     color: black;
   }
 	}
+
+/* REALISED BY AMINE SARADOUNI   INSTAGRAM,TIKTOK,YOUTUBE @ONLYCODECHANNEL*/
